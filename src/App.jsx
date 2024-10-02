@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css'
 import LoginPage from './pages/LoginPage'
@@ -11,7 +11,7 @@ function App() {
 
   const login = () => {
     setLoggedIn(true);
-    localStorage.setItem('loggedIn', 'true'); 
+    localStorage.setItem('loggedIn', 'true');
   };
 
   const logout = () => {
