@@ -3,7 +3,7 @@ import './CategoryPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faX } from '@fortawesome/free-solid-svg-icons';
 
-function CategoryPage({ onLogin }) {
+function CategoryPage({ onLogin , logout}) {
     const [cat, setCat] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const [searchInput, setSearchInput] = useState('');
@@ -25,10 +25,7 @@ function CategoryPage({ onLogin }) {
         setCategories(newCategories);
     };
 
-    const handleLogout = () => {
-        onLogin();
-        alert('Logged out');
-    };
+
 
 
 
@@ -50,7 +47,7 @@ function CategoryPage({ onLogin }) {
             <h2 className="category-title">Gestion des Catégories</h2>
 
             <div className="logout-container">
-                <button className="logout-button" onClick={handleLogout}>Retour</button>
+                <button className="logout-button" onClick={logout}>Retour</button>
             </div>
 
             <div className='category-form' onSubmit={handleSearch}>
