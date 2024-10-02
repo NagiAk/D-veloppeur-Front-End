@@ -5,7 +5,7 @@ import LoginPage from './pages/LoginPage'
 import CategoryPage from './pages/CategoryPage';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const login = () => {
     setLoggedIn(!loggedIn);
